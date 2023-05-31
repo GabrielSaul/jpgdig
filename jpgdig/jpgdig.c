@@ -1,8 +1,8 @@
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
- *	 AUTHOR: Gabriel Doyle-Finch                                     *
+ *	 AUTHOR: Gabriel Doyle-Finch                                 *
  *     FILE: jpgdig.c                                                *
  * OVERVIEW: A forensic recovery program that identifies & restores  *
- *			 JPEG files from a corrupted CompactFlash (CF) card      *
+ *	     JPEG files from a corrupted CompactFlash (CF) card      *
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
  
 #include <stdio.h>
@@ -19,24 +19,24 @@
 #define SIG_SIZE 			3
 
 // Fourth byte parameters.
-#define FOURTH_BYTE_MIN		0xe0
-#define FOURTH_BYTE_MAX		0xef
+#define FOURTH_BYTE_MIN			0xe0
+#define FOURTH_BYTE_MAX			0xef
 
 // Maximum number of writable files.
-#define NUM_FILE_MAX		999
+#define NUM_FILE_MAX			999
 
 // Help flags.
-#define HELP_FLAG_BRIEF		"-h"
-#define HELP_FLAG_VERBOSE	"--help"
+#define HELP_FLAG_BRIEF			"-h"
+#define HELP_FLAG_VERBOSE		"--help"
 
 // Additional exit code(s).
-#define EXIT_HELP_NEEDED	2
+#define EXIT_HELP_NEEDED		2
 
 // Required command line argument count.
-#define REQ_ARG_COUNT		2
+#define REQ_ARG_COUNT			2
 
 // Command line argument index values.
-#define CF_CARD_FILE_INDEX	REQ_ARG_COUNT - 1
+#define CF_CARD_FILE_INDEX		REQ_ARG_COUNT - 1
 
 // Check the given buffer for a valid JPEG signature.
 bool sigcheck(const uint8_t* buf, const int buf_size); 
